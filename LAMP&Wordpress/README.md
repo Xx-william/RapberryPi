@@ -80,6 +80,7 @@ create database wordpress;
 ```
 cd /var/www/html
 sudo chown pi: .
+sudo chown -R pi:www-data /var/www/html
 ```
 At this part, you can either upload [Wordpress](https://github.com/WordPress/WordPress) to **/var/www/html** or download via terminal
 ```
@@ -106,4 +107,9 @@ Replace **'database_name_here'**, **'username_here'**, **'password_here'** with 
 mv wp-config-sample.php wp-config.php
 ```
 
+One more thing:
+If you want to dev your wordpress site at local, you need to add the code below into **wp-config.php**, then you can install the wordpress plugin at local env
+```
+define('FS_METHOD', 'direct');
+```
 Now you are good to go.
