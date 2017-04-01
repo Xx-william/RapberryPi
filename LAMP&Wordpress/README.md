@@ -1,4 +1,4 @@
-#Preperation
+# Preperation
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -50,25 +50,25 @@ sudo raspi-config
 Navigate to the **Interface** tab, select **Enable** next to **SSH**
 Then you can connect to you pi with FTP client using protocal SFTP
 
-#2. LAMP
-##2.1 Install Apache
+# 2. LAMP
+## 2.1 Install Apache
 ```
 sudo apt-get install apache2 -y
 sudo service apache2 restart
 ```
-##2.2 Install PHP
+## 2.2 Install PHP
 ```
 sudo apt-get install php5 libapache2-mod-php5 -y
 sudo service apache2 restart
 ```
-##2.3 Install MySQL
+## 2.3 Install MySQL
 ```
 sudo apt-get install mysql-server php5-mysql -y
 sudo service apache2 restart
 ```
 Need to set your password while instalation
 
-##2.4 MySQL configuration
+## 2.4 MySQL configuration
 ```
 mysql -uroot -p
 ```
@@ -76,7 +76,7 @@ mysql -uroot -p
 create database wordpress;
 ```
 
-#3. Install Wordpress
+# 3. Install Wordpress
 ```
 cd /var/www/html
 sudo chown pi: .
