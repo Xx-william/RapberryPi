@@ -10,13 +10,13 @@ docker run --name name-of-container -e MYSQL_ROOT_PASSWORD=database-password -d 
   * database-password: replace with the database password for root user.
   * tag: specific version of MySQL or latest.
 
-#3. Connect to MySQL form an application in another Docker container (run container like this in order to connect to Mysql)
+# 3. Connect to MySQL form an application in another Docker container (run container like this in order to connect to Mysql)
 ```
 docker run --name name-of-app --link name-of-container:mysql -d app-that-uses-mysql
 ```
   * name-of-app:
 
-#4. Start portainer GUI
+# 4. Start portainer GUI
 ```
 docker run --name portainer -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
 ```
