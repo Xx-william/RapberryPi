@@ -48,7 +48,7 @@ See more details [Here](https://download.pureftpd.org/pub/pure-ftpd/doc/README.V
 sudo raspi-config
 ```
 Navigate to the **Interface** tab, select **Enable** next to **SSH**
-Then you can connect to you pi with FTP client using protocal SFTP
+Then you can connect to you pi with FTP client using protocol SFTP
 
 # 2. LAMP
 ## 2.1 Install Apache
