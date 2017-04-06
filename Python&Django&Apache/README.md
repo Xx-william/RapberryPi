@@ -34,7 +34,8 @@ sudo reboot
 ```
 
 # 2. Install packages
-If the version of Python you are using is under 3.0, go check (here)[https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-14-04].
+If the version of Python you are using is under 3.0, go check
+[here](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-14-04).
 If the version of Python you are using is beyond 3.0, continu.
 ```
 sudo apt-get update
@@ -148,5 +149,14 @@ It will create a Django project under the current directory.
   
   ### Wrapping up some permissions issues
   ```
-  
+  chmod 664 ~/pyproject/db.sqlite3
+  sudo chown :www-data ~/pyproject/db.sqlite3
+  sudo chown :www-data ~/pyproject
   ```
+  restart apache2 server, before doing this. please reload the daemon
+  ```
+  sudo systemctl daemon-reload
+  sudo service apache2 restart
+  ```
+  
+  Now you are good to go.
